@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List, java.util.ArrayList, setra.model.entities.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,11 @@
 	<title>SETRA Web | Principal</title>
 	<%@ include file="templates/global/styles.jsp" %>
 </head>
+	<%
+		List<TipoProveedorEntity> ListaTipoProveedor = request.getAttribute("listaTipoProveedor") == null ? new ArrayList<TipoProveedorEntity>() : (List<TipoProveedorEntity>) request.getAttribute("listaTipoProveedor");
+		String resultado = request.getAttribute("TestConnection").toString();
+	%>
+	
 	<body class="vertical-layout vertical-menu-modern navbar-floating footer-static" data-open="click" 
 		  data-menu="vertical-menu-modern" data-col="">
 	<%@ include file="templates/admin/header.jsp" %>
@@ -42,7 +48,14 @@
                                     <h4 class="card-title">Dashboard</h4>
                                 </div>
                                 <div class="card-body">
-                                    Contenido....
+                                	<%=resultado %>
+                                	<br>
+                                    Lista de Tipos de Proveedor
+                                    <ul>
+                                    	<% for(TipoProveedorEntity item : ListaTipoProveedor) {
+                                    		out.print("<li>"+ item.GetNombre() + "</li>");
+                                    	} %>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
-                    <a class="dropdown-item" href="/setra-web">
+                    <a class="dropdown-item" href="/">
                     	<i class="me-50" data-feather="power"></i> Cerrar Sesi&oacute;n
                     </a>
                 </div>

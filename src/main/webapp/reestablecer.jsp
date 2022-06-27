@@ -19,7 +19,7 @@
 	            <div class="content-body">
 	                <div class="auth-wrapper auth-cover">
 	                    <div class="auth-inner row m-0">
-	                        <!-- Brand logo--><a class="brand-logo" href="/setra-web">
+	                        <!-- Brand logo--><a class="brand-logo" href="/">
 	                            <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
 	                                <defs>
 	                                    <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
@@ -66,7 +66,7 @@
 	                                    <button class="btn btn-primary w-100" tabindex="2">Reestablecer contraseña</button>
 	                                </form>
 	                                <p class="text-center mt-2">
-	                                	<a href="/setra-web"><i data-feather="chevron-left"></i> Inicia sesión</a>
+	                                	<a href="/"><i data-feather="chevron-left"></i> Inicia sesión</a>
 	                                </p>
 	                            </div>
 	                        </div>

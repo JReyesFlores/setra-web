@@ -1,12 +1,18 @@
 package setra.controllers;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import setra.model.businesslogic.TipoProveedorLogic;
+import setra.model.entities.TipoProveedorEntity;
+
 import javax.servlet.RequestDispatcher;
 
 /**
@@ -36,7 +42,10 @@ public class Auth extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//request.setAttribute("nombre", "Jhon Phileppe Reyes Flores");
+		TipoProveedorLogic obj = new TipoProveedorLogic();
+		List<TipoProveedorEntity> lista = obj.List();
+		request.setAttribute("TestConnection", obj.TestConnection());
+		request.setAttribute("listaTipoProveedor", lista);
 		request.setAttribute("nombre", request.getParameter("login-email"));
 		request.setAttribute("rol", "Administrador");
 		

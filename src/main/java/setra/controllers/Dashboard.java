@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
+import setra.model.entities.*;
+import setra.model.businesslogic.*;
+import java.util.List;
 
 /**
  * Servlet implementation class Dashboard
@@ -36,6 +39,11 @@ public class Dashboard extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		TipoProveedorLogic obj = new TipoProveedorLogic();
+		//List<TipoProveedorEntity> lista = obj.List();
+		request.setAttribute("TestConnection", obj.TestConnection());
+		//request.setAttribute("listaTipoProveedor", lista);
+		
 		RequestDispatcher rsd = request.getRequestDispatcher("main.jsp");
 		rsd.forward(request, response);
 	}
