@@ -40,9 +40,9 @@ public class Dashboard extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		TipoProveedorLogic obj = new TipoProveedorLogic();
-		//List<TipoProveedorEntity> lista = obj.List();
+		List<TipoProveedorEntity> lista = obj.List();
 		request.setAttribute("TestConnection", obj.TestConnection());
-		//request.setAttribute("listaTipoProveedor", lista);
+		request.setAttribute("listaTipoProveedor", lista);
 		
 		RequestDispatcher rsd = request.getRequestDispatcher("main.jsp");
 		rsd.forward(request, response);

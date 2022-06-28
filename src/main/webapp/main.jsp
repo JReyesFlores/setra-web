@@ -10,7 +10,7 @@
 </head>
 	<%
 		List<TipoProveedorEntity> ListaTipoProveedor = request.getAttribute("listaTipoProveedor") == null ? new ArrayList<TipoProveedorEntity>() : (List<TipoProveedorEntity>) request.getAttribute("listaTipoProveedor");
-		String resultado = request.getAttribute("TestConnection").toString();
+		String resultadoTest = request.getAttribute("TestConnection").toString();
 	%>
 	
 	<body class="vertical-layout vertical-menu-modern navbar-floating footer-static" data-open="click" 
@@ -48,7 +48,7 @@
                                     <h4 class="card-title">Dashboard</h4>
                                 </div>
                                 <div class="card-body">
-                                	<%=resultado %>
+                                	<%=resultadoTest %>
                                 	<br>
                                     Lista de Tipos de Proveedor
                                     <ul>
