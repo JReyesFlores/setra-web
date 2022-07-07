@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<!--<!%@ include file="templates/auth/validateUserLogin.jsp" %>-->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List, java.util.ArrayList, setra.model.entities.*" %>
 <!DOCTYPE html>
 <html>
@@ -7,12 +7,7 @@
 	<%@ include file="templates/global/meta.jsp" %>
 	<title>SETRA Web | Principal</title>
 	<%@ include file="templates/global/styles.jsp" %>
-</head>
-	<%
-		List<TipoProveedorEntity> ListaTipoProveedor = request.getAttribute("listaTipoProveedor") == null ? new ArrayList<TipoProveedorEntity>() : (List<TipoProveedorEntity>) request.getAttribute("listaTipoProveedor");
-		String resultadoTest = request.getAttribute("TestConnection").toString();
-	%>
-	
+</head> 
 	<body class="vertical-layout vertical-menu-modern navbar-floating footer-static" data-open="click" 
 		  data-menu="vertical-menu-modern" data-col="">
 	<%@ include file="templates/admin/header.jsp" %>
@@ -48,14 +43,6 @@
                                     <h4 class="card-title">Dashboard</h4>
                                 </div>
                                 <div class="card-body">
-                                	<%=resultadoTest %>
-                                	<br>
-                                    Lista de Tipos de Proveedor
-                                    <ul>
-                                    	<% for(TipoProveedorEntity item : ListaTipoProveedor) {
-                                    		out.print("<li>"+ item.GetNombre() + "</li>");
-                                    	} %>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -69,8 +56,7 @@
     <%@ include file="templates/admin/footer.jsp" %>
 	<%@ include file="templates/global/jsSectionA.jsp" %>
 	<!-- BEGIN: Page Vendor JS-->
-	<script src="app-assets/vendors/js/forms/cleave/cleave.min.js"></script>
-   	<script src="app-assets/vendors/js/forms/cleave/addons/cleave-phone.us.js"></script>
+ 
     <!-- END: Page Vendor JS-->
 	<%@ include file="templates/global/jsSectionB.jsp" %>
 	<script>
