@@ -21,12 +21,12 @@ public class General {
 	public static String Encriptar(String texto) { 
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-256");
-			md.update(SALT.getBytes()); // <-- Prepend SALT.
+			md.update(SALT.getBytes());
 			md.update(texto.getBytes());
-			// md.update(SALT.getBytes()); // <-- Or, append SALT.
+			// md.update(SALT.getBytes());
 
 			byte[] out = md.digest();
-			return bytesToHex(out); // <-- Return the Hex Hash.
+			return bytesToHex(out);
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}

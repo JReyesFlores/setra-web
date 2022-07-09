@@ -1,12 +1,3 @@
-/*=========================================================================================
-  File Name: auth-login.js
-  Description: Auth login js file.
-  ----------------------------------------------------------------------------------------
-  Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-  Author: PIXINVENT
-  Author URL: http://www.themeforest.net/user/pixinvent
-==========================================================================================*/
-
 $(function() {
 	'use strict';
 
@@ -65,11 +56,11 @@ $(function() {
 				type: 'POST',
 				data: datos,
 				success: function(response) {
-					console.log(`Contraseña encriptada!: ${response}`);
-					console.info(datos);
+					//console.log(`Contraseña encriptada!: ${response}`);
+					console.info(response);
 				},
 				error: function(err) {
-					console.error(`Error: ${err}`);
+					console.error(err);
 				}
 			});
 		}
