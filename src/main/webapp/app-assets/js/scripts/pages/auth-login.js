@@ -58,6 +58,11 @@ $(function() {
 				success: function(response) {
 					//console.log(`Contraseña encriptada!: ${response}`);
 					console.info(response);
+					if (response === true) {
+						console.log('Usuario y contraseña correcta!');
+					} else {
+						console.log('Usuario y contraseña incorrecta!');
+					}
 				},
 				error: function(err) {
 					console.error(err);

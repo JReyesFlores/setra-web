@@ -1,7 +1,7 @@
 package setra.controllers;
 
-import java.io.IOException;
-import java.util.List;
+import java.io.IOException; 
+//import java.util.List;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 import setra.model.businesslogic.TipoProveedorLogic;
-import setra.model.entities.TipoProveedorEntity;
+//import setra.model.entities.TipoProveedorEntity;
+import setra.utils.General;
 //import javax.servlet.RequestDispatcher;
 //import setra.utils.General;
 
@@ -31,11 +32,12 @@ public class Auth extends HttpServlet {
 		String usuario = request.getParameter("usuario").toString();
 		String contrasenia = request.getParameter("password").toString();
 		TipoProveedorLogic lg = new TipoProveedorLogic();
-		List<TipoProveedorEntity> milista = lg.List();
+		boolean SesionValida = lg.Login(usuario, contrasenia);
 
-		//response.getWriter().print(milista);
-		response.setContentType("application/json;charset=UTF-8");
-		new Gson().toJson(milista, response.getWriter());
+		 
+		response.getWriter().print(SesionValida);
+		//response.setContentType("application/json;charset=UTF-8");
+		//new Gson().toJson(milista, response.getWriter());
 	}
 
 	protected void doTrace(HttpServletRequest request, HttpServletResponse response)

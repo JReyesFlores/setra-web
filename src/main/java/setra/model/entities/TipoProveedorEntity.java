@@ -3,6 +3,7 @@ package setra.model.entities;
 public class TipoProveedorEntity {
 	private int TipoProveedorId;
 	private String Nombre;
+	private String Sigla;
 	private boolean EstadoRegistro;
 	
 	public TipoProveedorEntity() {
