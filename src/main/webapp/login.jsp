@@ -37,7 +37,7 @@
 	                                <h2 class="card-title fw-bold mb-1">Bienvenido a SETRA! 👋</h2>
 	                                <p class="card-text mb-2">Por favor, ingrese su correo y contraseña.</p>
 	
-	                                <form class="auth-login-form mt-2">
+	                                <form class="auth-login-form mt-2" action="Auth" method="POST">
 	                                    <div class="mb-1">
 	                                        <label class="form-label" for="login-email">Correo Electrónico</label>
 	                                        <input class="form-control" id="login-email" type="text" name="login-email"
@@ -59,9 +59,10 @@
 	                                            </span>
 	                                        </div>
 	                                    </div>
-	                                    <button class="btn btn-primary w-100" tabindex="4" type="button" id="btnLogin" name="btnLogin">
+	                                    <button class="btn btn-primary w-100" tabindex="4" type="submit" id="btnLogin" name="btnLogin">
 	                                    	Iniciar Sesión
 	                                    </button>
+	                                    <%= request.getAttribute("message") == null ? "" : request.getAttribute("message").toString() %>
 	                                </form>
 	                            </div>
 	                        </div>

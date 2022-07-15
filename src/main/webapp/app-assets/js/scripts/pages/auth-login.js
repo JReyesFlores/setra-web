@@ -2,10 +2,9 @@ $(function() {
 	'use strict';
 
 	var pageLoginForm = $('.auth-login-form');
-	var btnLogin = $('#btnLogin');
-	var loginEmail = $('#login-email');
-	var loginPassword = $('#login-password');
-	//console.log(pageLoginForm);
+	//var btnLogin = $('#btnLogin');
+	//var loginEmail = $('#login-email');
+	//var loginPassword = $('#login-password');
 
 	// jQuery Validation
 	// --------------------------------------------------------------------
@@ -42,6 +41,7 @@ $(function() {
 		});
 	}
 
+	/*
 	const ValidacionDatos = function(usuario, password) {
 		return usuario.hasClass('error') || password.hasClass('error');
 	}
@@ -57,10 +57,11 @@ $(function() {
 				data: datos,
 				success: function(response) {
 					//console.log(`Contraseña encriptada!: ${response}`);
-					console.log(typeof response);
+					//console.log(typeof response);
 					console.log(response);
 					if (response.toString().toLowerCase() == "true") {
 						console.log('Usuario y contraseña correcta!');
+						//$('body').html(response);
 					} else {
 						console.log('Usuario y contraseña incorrecta!');
 					}
@@ -71,4 +72,5 @@ $(function() {
 			});
 		}
 	});
+	*/
 });
