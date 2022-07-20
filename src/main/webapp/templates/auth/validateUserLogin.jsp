@@ -1,3 +1,3 @@
 <%
-	if(session.getAttribute("") == null) pageContext.forward("login.jsp");
+	if(session.getAttribute("user") == null) pageContext.forward("login.jsp");
 %>

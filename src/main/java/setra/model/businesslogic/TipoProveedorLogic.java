@@ -4,8 +4,7 @@ import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
 import setra.model.ConnectionbdSETRA;
-import setra.model.entities.TipoProveedorEntity;
-import setra.utils.General;
+import setra.model.entities.TipoProveedorEntity; 
 
 public class TipoProveedorLogic {
 

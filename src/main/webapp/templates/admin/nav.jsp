@@ -3,7 +3,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item me-auto">
-                <a class="navbar-brand" href="Dashboard">
+                <a class="navbar-brand" href="main.jsp">
                     <span class="brand-logo">
                         <%@ include file="/templates/global/svg-image.jsp" %>
                     </span>

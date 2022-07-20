@@ -27,13 +27,13 @@ $(function () {
         $(element).valid();
       }, */
       rules: {
-        'forgot-password-email': {
+        'forgot-email': {
           required: true,
           email: true
         }
       },
       messages: {
-		'forgot-password-email': {
+		'forgot-email': {
 		  required: "El correo electrónico es requerido.",
 		  email: "Formato no válido para el correo electrónico."
 		}
