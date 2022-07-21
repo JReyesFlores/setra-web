@@ -8,11 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import setra.model.businesslogic.UsuarioLogic;
 import setra.model.response.LoginResponse;
 import setra.model.response.UsuarioExisteResponse;
 import setra.utils.General;
-import setra.utils.General.AuthActions;
+import setra.utils.General.SessionActions;
 
 @WebServlet("/Auth")
 public class SessionController extends HttpServlet {
@@ -33,8 +37,9 @@ public class SessionController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		AuthActions accion = AuthActions.valueOf(request.getParameter("accion"));
+		SessionActions accion = SessionActions.valueOf(request.getParameter("accion"));
 
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		switch (accion) {
 		case INICIAR_SESION:
 			String correo = General.ConvertToString(request.getParameter("login-email"));
@@ -51,10 +56,10 @@ public class SessionController extends HttpServlet {
 			break;
 
 		case CERRAR_SESION:
-			request.setAttribute("message", "CERRAR_SESION.");
 			HttpSession misesion = request.getSession();
 			misesion.invalidate();
-			response.sendRedirect("login.jsp");
+			// response.sendRedirect("login.jsp");
+			gson.toJson(true, response.getWriter());
 			break;
 
 		case CAMBIAR_PASSWORD:

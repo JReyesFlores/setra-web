@@ -2,7 +2,6 @@ package setra.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,7 +10,11 @@ public class General {
 	private static String SALT = "¡SecrtSaltK3yJ4v4!";
 	private static final String FORMATO_FECHA = "yyyy-MM-dd";
 
-	public static enum AuthActions {
+	public static enum UtilesActions {
+		OBTENER_MENU_NAV
+	}
+
+	public static enum SessionActions {
 		INICIAR_SESION, CAMBIAR_PASSWORD, REESTABLECER_PASSWORD, CERRAR_SESION
 	}
 

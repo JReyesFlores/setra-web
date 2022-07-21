@@ -71,7 +71,7 @@
 								}
 								%>
 								<p class="text-center mt-2">
-									<a href="/"><i data-feather="chevron-left"></i> Inicia
+									<a href="login.jsp"><i data-feather="chevron-left"></i> Inicia
 										sesión</a>
 								</p>
 							</div>
